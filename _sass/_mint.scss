@@ -67,7 +67,7 @@ body {
       color: var(--color-mint-dark);
     }
     h3{
-      font-size: 4em;
+      font-size: clamp(2rem, 6vw, 4em);
       font-weight: var(--font-bricolage-regular);
       em{
         font-family: var(--font-lora);
