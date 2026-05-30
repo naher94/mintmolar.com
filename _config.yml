@@ -19,6 +19,8 @@ url: "https://mintmolar.com" # the base hostname & protocol for your site
 collections:
   services:
     output: false
+  team:
+    output: false
 
 # Build settings
 markdown: kramdown
