@@ -2,3 +2,64 @@
 layout: default
 hero_headline: "The people who will be <em>taking care</em> of you."
 ---
+
+{% assign doctors = site.team | where: "role", "doctor" | sort: "order" %}
+{% assign staff = site.team | where: "role", "staff" | sort: "order" %}
+
+<section class="doctors scaffold-grid">
+  {% for member in doctors %}
+    <div class="doctor-card scaffold-grid-span-half scaffold-grid">
+      <div class="profile-container">
+        <img src="../{{ member.photo }}" alt="{{ member.name }}">
+      </div>
+      <div class="content-container">
+        <h2>{{ member.name }}</h2>
+        <p>{{ member.credentials }}</p>
+        <p> {{ member.bio }} </p>
+      </div>
+    </div>
+    <!-- <div class="doctor-card scaffold-grid-span-full">
+      <div class="doctor-card__photo">
+        <img src="{{ member.photo }}" alt="{{ member.name }}">
+      </div>
+      <div class="doctor-card__details">
+        <h2>{{ member.name }}</h2>
+        <p class="member-title">{{ member.title }}{% if member.credentials %} {{ member.credentials }}{% endif %}</p>
+        {% if member.bio %}<p class="member-bio">{{ member.bio }}</p>{% endif %}
+        {% if member.education.size > 0 %}
+          {% for edu in member.education %}
+            <div class="member-meta">
+              <span class="meta-label">Education</span>
+              <span class="meta-value">{{ edu.degree }}, {{ edu.institution }}</span>
+            </div>
+          {% endfor %}
+        {% endif %}
+        {% if member.languages %}
+          <div class="member-meta">
+            <span class="meta-label">Languages</span>
+            <span class="meta-value">{{ member.languages | join: ", " }}</span>
+          </div>
+        {% endif %}
+      </div>
+    </div> -->
+  {% endfor %}
+</section>
+
+<section class="staff scaffold-grid">
+  {% for member in staff %}
+    <!-- <div class="staff-card scaffold-grid-span-full md:scaffold-grid-span-third">
+      <div class="staff-card__photo">
+        <img src="{{ member.photo }}" alt="{{ member.name }}">
+      </div>
+      <h3>{{ member.name }}</h3>
+      <p class="member-title">{{ member.title }}{% if member.credentials %} {{ member.credentials }}{% endif %}</p>
+      {% if member.bio %}<p class="member-bio">{{ member.bio }}</p>{% endif %}
+      {% if member.languages %}
+        <div class="member-meta">
+          <span class="meta-label">Languages</span>
+          <span class="meta-value">{{ member.languages | join: ", " }}</span>
+        </div>
+      {% endif %}
+    </div> -->
+  {% endfor %}
+</section>

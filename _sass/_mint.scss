@@ -159,4 +159,17 @@ body {
       }
     }
   }
+
+  .doctor-card, .staff-card{
+    .profile-container{
+      aspect-ratio: 1/1;
+      border-radius: 20px;
+      overflow: hidden;
+      background-color: red;
+    }
+  }
+  .doctor-card{
+    --scaffold-cols: 5fr 7fr;
+  }
+
 }
