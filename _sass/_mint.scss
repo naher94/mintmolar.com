@@ -1,5 +1,9 @@
 @use 'scaffold/scaffold' as scaffold;
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   background: var(--color-mint-extra-light);
 
