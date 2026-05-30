@@ -5,7 +5,7 @@ credentials: "DDS"
 role: doctor          # doctor | staff
 order: 1
 
-photo: "img/test-image-square.png"
+photo: "test-image-square.png"
 
 bio: >
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget lacinia nisl.
