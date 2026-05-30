@@ -10,4 +10,20 @@ body {
   .page-content{
     @include scaffold.container();
   }
+  .hero{
+    padding-block: 1em 3em;
+    background: var(--color-mint-light);
+    h1{
+      font-weight: var(--font-bricolage-extrabold);
+      font-size: 5em;
+      margin: 0;
+      text-wrap: balance;
+      em{
+        font-family: var(--font-lora);
+        font-weight: var(--font-lora-regular);
+        font-style: var(--font-lora-italic);
+        color: var(--color-mint-dark);
+      }
+    }
+  }
 }
