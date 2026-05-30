@@ -10,7 +10,7 @@
     color: var(--color-white);
 
     h2{
-      font-size: 3rem;
+      font-size: 4rem;
       font-weight: var(--font-bricolage-regular);
       text-wrap: balance;
       margin: 0;
@@ -22,6 +22,10 @@
       }
     }
     .content-area{
+      text-wrap: balance;
+      // p{
+      //   margin: 0;
+      // }
       .main{
         font-size: 1.5em;
       }
