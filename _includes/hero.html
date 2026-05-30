@@ -3,7 +3,7 @@
   <div class="scaffold-container hero__inner">
 
     {% if page.hero_tag %}
-      <p class="hero__tag">{{ page.hero_tag }}</p>
+      <p class="hero__tag">{{ page.hero_tag | raw }}</p>
     {% endif %}
 
     {% if page.hero_headline %}
