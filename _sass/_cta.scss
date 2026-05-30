@@ -4,10 +4,13 @@
   @include scaffold.container();
   .cta-card{
     background-color: var(--color-mint-extra-dark);
-    padding: 3rem;
+    padding: 2rem;
     margin-block-start: 5em;
     border-radius: 40px;
     color: var(--color-white);
+    @include scaffold.breakpoint(md) {
+      padding: 3rem;
+    }
 
     h2{
       font-size: clamp(2rem, 6vw, 4rem);
