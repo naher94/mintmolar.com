@@ -5,6 +5,7 @@
   color: var(--color-black);
   padding: 0.5rem 1.25rem;
   border-radius: var(--number-round);
+  transition: var(--transition-sprint);
   &:hover {
     background-color: rgba(#000000, 0.1);
   }
