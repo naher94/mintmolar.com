@@ -10,6 +10,7 @@
     color: var(--color-white);
     @include scaffold.breakpoint(md) {
       padding: 3rem;
+      gap: 3em;
     }
 
     h2{
@@ -41,8 +42,19 @@
       }
       .action-bar{
         margin-block-start: 1em;
+        display: flex;
+        gap: 0.5em;
+        @include scaffold.breakpoint(md) {
+          display: block;
+          gap: 0;
+        }
         a{
           display: inline-block;
+          text-align: center;
+          width: 50%;
+          @include scaffold.breakpoint(md) {
+            width: auto;
+          }
           padding: 0.5rem 2rem;
           color: inherit;
           text-decoration: none;
