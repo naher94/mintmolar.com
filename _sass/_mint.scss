@@ -1,6 +1,12 @@
+@use 'scaffold/scaffold' as scaffold;
+
 body {
   background: var(--color-mint-extra-light);
 
   font-family: var(--font-bricolage);
   font-weight: var(--font-bricolage-regular);
+
+  .page-content{
+    @include scaffold.container();
+  }
 }
