@@ -96,9 +96,15 @@ body {
   }
 
   .what-we-do, .how-we-work{
-    margin-block-start: 6em;
+    margin-block-start: 4em;
+    @include scaffold.breakpoint(md) {
+      margin-block-start: 6em;
+    }
     .headline{
-      margin-block-end: 2em;
+      margin-block-end: 0;
+      @include scaffold.breakpoint(md) {
+        margin-block-end: 2em;
+      }
     }
     h2, h3{
       margin: 0;
@@ -115,6 +121,7 @@ body {
     h3{
       font-size: clamp(2rem, 6vw, 4em);
       font-weight: var(--font-bricolage-regular);
+      text-wrap: balance;
       em{
         font-family: var(--font-lora);
         font-style: var(--font-lora-italic);
@@ -124,6 +131,7 @@ body {
     .services-link{
       font-size: 1em;
       text-decoration: none;
+      text-wrap: balance;
       @include scaffold.breakpoint(md) {
         font-size: 1.5em;
       }
