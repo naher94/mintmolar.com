@@ -7,12 +7,17 @@ hero_headline: "Family dentistry, <em>unhurried.</em>"
 <section class="contact-stats scaffold-grid">
   <div class="item-card">
     <h2>hours</h2>
-    <p class="primary-info">Mon - Fri ....</p>
-    <p class="secondary-info">secondary</p>
+    {% for hour in site.data.contact.hours %}
+      {% if hour.time != "Closed" %}
+        <p class="primary-info">{{ hour.days }} · {{ hour.time }}</p>
+      {% else %}
+        <p class="secondary-info">{{ hour.days }} · {{ hour.time }}</p>
+      {% endif %}
+    {% endfor %}
   </div>
   <div class="item-card">
     <h2>call</h2>
-    <p class="primary-info">{{ site.data.contact.phone }}</p>
+    <a class="primary-info" href="tel:{{ site.data.contact.phone_link }}">{{ site.data.contact.phone }}</a>
     <p class="secondary-info">or text - same number</p>
   </div>
   <div class="item-card">
