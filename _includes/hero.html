@@ -3,7 +3,13 @@
   <div class="scaffold-container hero__inner">
 
     {% if page.hero_tag %}
-      <p class="hero__tag">{{ page.hero_tag | raw }}</p>
+      <p class="hero__tag">
+        {% if page.hero_tag_link %}
+          <a href="{{ page.hero_tag_link }}" class="hero__tag-link">{{ page.hero_tag }} {% include arrow-animation.html %}</a>
+        {% else %}
+          {{ page.hero_tag }}
+        {% endif %}
+      </p>
     {% endif %}
 
     {% if page.hero_headline %}

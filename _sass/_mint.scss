@@ -18,7 +18,9 @@ body {
     padding-block: 1em 3em;
     background: var(--color-mint-light);
     margin-block-end: 3em;
-    .hero__tag{
+    .hero__tag-link{
+      text-decoration: none;
+      color: inherit;
       &:hover{
         .arrow-animation{
           span{
