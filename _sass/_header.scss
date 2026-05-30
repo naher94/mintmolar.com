@@ -12,8 +12,11 @@
 }
 
 header {
-  padding-block: 3em;
+  padding-block: 2em 1em;
   background: var(--color-mint-light);
+  @include scaffold.breakpoint(md) {
+    padding-block: 3em;
+  }
 
   .header {
     &__inner {
@@ -25,6 +28,10 @@ header {
     &__nav {
       @include scaffold.flex($gap: 0.25rem);
       align-items: center;
+      display: none;
+      @include scaffold.breakpoint(md) {
+        display: flex;
+      }
     }
 
     &__nav-link {
@@ -38,14 +45,43 @@ header {
 
     &__phone {
       @extend %header-link;
+      display: none;
+      @include scaffold.breakpoint(md) {
+        display: inline-flex;
+      }
     }
 
     &__cta {
       @extend %header-link;
       background: var(--color-mint-dark);
       color: var(--color-white);
+      display: none;
+      @include scaffold.breakpoint(md) {
+        display: inline-flex;
+      }
       &:hover {
         background-color: var(--color-mint-extra-dark);
+      }
+    }
+
+    &__phone-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--color-mint-dark);
+      color: var(--color-white);
+      border-radius: var(--number-round);
+      padding: 0.5rem 1.25rem;
+      transition: var(--transition-sprint);
+      svg {
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+      &:hover {
+        background-color: var(--color-mint-extra-dark);
+      }
+      @include scaffold.breakpoint(md) {
+        display: none;
       }
     }
   }
