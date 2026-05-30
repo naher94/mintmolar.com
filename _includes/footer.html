@@ -5,12 +5,14 @@
       <div>
         logo container
       </div>
-      <div class="nav-section">
-        <div class="nav-container">
+      <div class="nav-section scaffold-flex">
+        <div class="nav-container scaffold-flex scaffold-flex-col">
           <h3>Pages</h3>
-          Home
+          <a class="" href="{{ site.baseurl }}/">Home</a>
+          <a class="" href="{{ site.baseurl }}/team">Team</a>
+          <a class="" href="{{ site.baseurl }}/services">Services</a>
         </div>
-        <div class="nav-container">
+        <div class="nav-container scaffold-flex scaffold-flex-col">
           <h3>Connect</h3>
           <p>{{ site.data.contact.address.street }}<br>{{ site.data.contact.address.city }}, {{ site.data.contact.address.state }} {{ site.data.contact.address.zip }}</p>
           <a href="tel:{{ site.data.contact.phone_link }}">{{ site.data.contact.phone }}</a>
