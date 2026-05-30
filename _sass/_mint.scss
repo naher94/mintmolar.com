@@ -65,6 +65,7 @@ body {
       text-transform: uppercase;
       font-weight: var(--font-bricolage-regular);
       color: var(--color-mint-dark);
+      // TODO mobile make 1em fontsize
     }
     h3{
       font-size: clamp(2rem, 6vw, 4em);
@@ -77,6 +78,7 @@ body {
     }
     .services-link{
       font-size: 1.5em;
+      // TODO mobile make 1em fontsize
       text-decoration: none;
       margin-block-start: 0.5em;
       display: block;
