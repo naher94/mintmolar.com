@@ -2,24 +2,50 @@
 
 footer {
   background: var(--color-mint-light);
-  padding-block: 5rem;
+  padding-block: 2rem 5rem;
   margin-block-start: 5em;
+  @include scaffold.breakpoint(md) {
+    padding-block: 5rem;
+  }
   .mainfooter{
-    margin-block-end: 6em;
+    margin-block-end: 3em;
+    @include scaffold.breakpoint(md) {
+      margin-block-end: 6em;
+    }
   }
   .logo-container{
+    width: 100%;
+    @include scaffold.breakpoint(md) {
+      width: auto;
+    }
     svg{
-      width: 20em;
+      width: 100%;
+      @include scaffold.breakpoint(md) {
+        width: 20em;
+      }
+    }
+    order: 2;
+    @include scaffold.breakpoint(md) {
+      order: 1;
     }
   }
   .nav-section{
-    gap: 4em;
+    gap: 3em;
     a{
       color: inherit;
       text-decoration: none;
       &:hover{
         text-decoration: underline;
       }
+    }
+    order: 1;
+    margin-block-end: 4em;
+    flex-direction: column;
+    @include scaffold.breakpoint(md) {
+      order: 2;
+      margin-block-end: 0;
+      flex-direction: row;
+      gap: 4em;
     }
   }
   .nav-container{
@@ -39,8 +65,22 @@ footer {
     p{
       margin: 0;
     }
+    .copyright{
+      order: 2;
+      @include scaffold.breakpoint(md) {
+        order: 1;
+      }
+    }
     .policies{
       gap: 1em;
+      order: 1;
+      flex-direction: column;
+      margin-block-end: 2rem;
+      @include scaffold.breakpoint(md) {
+        order: 2;
+        flex-direction: row;
+        margin-block-end: 0;
+      }
     }
     a{
       color: inherit;
