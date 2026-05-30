@@ -33,6 +33,34 @@
       .secondary{
         font-weight: var(--font-bricolage-regular);
       }
+      .action-bar{
+        margin-block-start: 1em;
+        a{
+          display: inline-block;
+          width: 4em;
+          text-align: center;
+          padding: 0.5rem 1.25rem;
+          color: inherit;
+          text-decoration: none;
+          border-radius: var(--number-round);
+          transition: var(--transition-sprint);
+          &:first-of-type{
+            background: var(--color-mint-dark);
+            &:hover{
+              // TODO update this color
+              background: var(--color-mint);
+            }
+          }
+          &:last-of-type{
+            box-shadow: inset 0 0 0 2px var(--color-mint-dark);
+            // outline: 2px solid var(--color-mint-dark);
+            // border: 2px solid var(--color-mint-dark);
+            &:hover{
+              background: var(--color-mint-dark);
+            }
+          }
+        }
+      }
     }
   }
 }
