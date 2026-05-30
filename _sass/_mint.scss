@@ -38,6 +38,11 @@ body {
         text-transform: uppercase;
         color: var(--color-mint-dark);
         font-weight: var(--font-bricolage-regular);
+        margin-top: 0;
+        margin-block-end: 0.3em;
+        @include scaffold.breakpoint(md) {
+          margin-block-end: 0.83em;
+        }
       }
       p{
         margin: 0;
@@ -47,8 +52,11 @@ body {
         color: inherit;
       }
       .primary-info{
-        font-size: 1.5em;
+        font-size: 1.25em;
         font-weight: var(--font-bricolage-bold);
+        @include scaffold.breakpoint(md) {
+          font-size: 1.5em;
+        }
       }
     }
   }
@@ -61,11 +69,13 @@ body {
       margin: 0;
     }
     h2{
-      font-size: 1.25em;
+      font-size: 1em;
       text-transform: uppercase;
       font-weight: var(--font-bricolage-regular);
       color: var(--color-mint-dark);
-      // TODO mobile make 1em fontsize
+      @include scaffold.breakpoint(md) {
+        font-size: 1.25em;
+      }
     }
     h3{
       font-size: clamp(2rem, 6vw, 4em);
@@ -77,9 +87,11 @@ body {
       }
     }
     .services-link{
-      font-size: 1.5em;
-      // TODO mobile make 1em fontsize
+      font-size: 1em;
       text-decoration: none;
+      @include scaffold.breakpoint(md) {
+        font-size: 1.5em;
+      }
       margin-block-start: 0.5em;
       display: block;
       color: var(--color-mint-dark);
