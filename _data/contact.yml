@@ -1,0 +1,15 @@
+phone: "301.668.6000"
+phone_link: "3016686000"
+email: "hello@mintmolar.com"
+
+address:
+  street: "65 Thomas Johnson Dr, Suite B"
+  city: "Frederick"
+  state: "MD"
+  zip: "21702"
+
+hours:
+  - days: "Mon–Thu"
+    time: "8am - 5pm"
+  - days: "Fri–Sun"
+    time: "Closed"
