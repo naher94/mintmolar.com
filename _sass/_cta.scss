@@ -1,0 +1,33 @@
+@use 'scaffold/scaffold' as scaffold;
+
+.cta-container {
+  @include scaffold.container();
+  .cta-card{
+    background-color: var(--color-mint-extra-dark);
+    padding: 3rem;
+    margin-block-start: 5em;
+    border-radius: 40px;
+    color: var(--color-white);
+
+    h2{
+      font-size: 3rem;
+      font-weight: var(--font-bricolage-regular);
+      text-wrap: balance;
+      margin: 0;
+      em{
+        font-family: var(--font-lora);
+        font-style: var(--font-lora-italic);
+        font-weight: var(--font-lora-regular);
+        color: var(--color-mint);
+      }
+    }
+    .content-area{
+      .main{
+        font-size: 1.5em;
+      }
+      .secondary{
+        font-weight: var(--font-bricolage-regular);
+      }
+    }
+  }
+}
