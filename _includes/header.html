@@ -1,18 +1,22 @@
 <header>
+  <div class="scaffold-container site-header__inner">
 
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <a class="site-header__logo" href="{{ site.baseurl }}/" aria-label="Mint and Molar - Home">
+      {% include mm-logo.svg %}
+    </a>
 
-    <nav class="site-nav">
-      <a href="#" class="menu-icon">
-      </a>
-
-      <div class="trigger">
-        {% for my_page in site.pages %}
-          {% if my_page.title %}
-          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-          {% endif %}
-        {% endfor %}
-      </div>
+    <nav class="site-header__nav">
+      {% for my_page in site.pages %}
+        {% if my_page.title %}
+          <a class="site-header__nav-link{% if page.url == my_page.url %} site-header__nav-link--active{% endif %}" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+        {% endif %}
+      {% endfor %}
     </nav>
 
+    <div class="site-header__actions">
+      <a class="site-header__phone" href="tel:3016686000">301.668.6000</a>
+      <a class="site-header__cta" href="{{ site.baseurl }}/contact">Book a visit</a>
+    </div>
+
+  </div>
 </header>
