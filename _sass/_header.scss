@@ -29,7 +29,7 @@ header{
     }
 
     &__actions {
-      @include scaffold.flex($gap: 1rem);
+      @include scaffold.flex($gap: 0.25rem);
       align-items: center;
     }
 
@@ -39,7 +39,7 @@ header{
 
     &__cta {
       @extend %header-link;
-      color: var(--color-white);
+      color: var(--color-white); //TODO this is not working
       background: var(--color-mint-dark);
       &:hover {
         background-color: var(--color-mint-extra-dark);
