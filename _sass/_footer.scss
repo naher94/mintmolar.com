@@ -1,16 +1,30 @@
 @use 'scaffold/scaffold' as scaffold;
 
 footer {
-  background: var(--color-mint-extra-dark);
-  color: var(--color-white);
+  background: var(--color-mint-light);
   padding-block: 3rem;
-
-  .footer {
-    &__inner {
-      @include scaffold.container();
-      @include scaffold.flex();
-      justify-content: space-between;
-      align-items: flex-start;
+  .subfooter{
+    color: var(--color-mint-dark);
+    p{
+      margin: 0;
+    }
+    .policies{
+      gap: 1em;
+    }
+    a{
+      color: inherit;
+      text-decoration: none;
+      &:hover{
+        text-decoration: underline;
+      }
     }
   }
+  // .footer {
+  //   &__inner {
+  //     @include scaffold.container();
+  //     @include scaffold.flex();
+  //     justify-content: space-between;
+  //     align-items: flex-start;
+  //   }
+  // }
 }
