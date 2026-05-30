@@ -1,0 +1,49 @@
+@use 'scaffold/scaffold' as scaffold;
+
+%header-link {
+  text-decoration: none;
+  color: var(--color-black);
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--number-round);
+  &:hover {
+    background-color: rgba(#000000, 0.1);
+  }
+}
+
+header{
+  padding-block: 3em;
+  .site-header {
+    &__inner {
+      @include scaffold.flex($gap: 0);
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__nav {
+      @include scaffold.flex($gap: 0.25rem);
+      align-items: center;
+    }
+
+    &__nav-link {
+      @extend %header-link;
+    }
+
+    &__actions {
+      @include scaffold.flex($gap: 1rem);
+      align-items: center;
+    }
+
+    &__phone {
+      @extend %header-link;
+    }
+
+    &__cta {
+      @extend %header-link;
+      color: var(--color-white);
+      background: var(--color-mint-dark);
+      &:hover {
+        background-color: var(--color-mint-extra-dark);
+      }
+    }
+  }
+}
