@@ -29,7 +29,6 @@ body {
   }
   .contact-stats{
     .item-card{
-      @include scaffold.span(third);
       h2{
         font-size: 1rem;
         text-transform: uppercase;

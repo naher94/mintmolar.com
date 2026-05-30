@@ -5,7 +5,7 @@ hero_headline: "Family dentistry, <em>unhurried.</em>"
 ---
 
 <section class="contact-stats scaffold-grid">
-  <div class="item-card">
+  <div class="item-card scaffold-grid-span-full md:scaffold-grid-span-third">
     <h2>hours</h2>
     <!-- TODO update this with the fancy closed thing -->
     {% for hour in site.data.contact.hours %}
@@ -16,16 +16,15 @@ hero_headline: "Family dentistry, <em>unhurried.</em>"
       {% endif %}
     {% endfor %}
   </div>
-  <div class="item-card">
+  <div class="item-card scaffold-grid-span-full md:scaffold-grid-span-third">
     <h2>call</h2>
     <a class="primary-info" href="tel:{{ site.data.contact.phone_link }}">{{ site.data.contact.phone }}</a>
     <p class="secondary-info">or text - same number</p>
   </div>
-  <div class="item-card">
+  <div class="item-card scaffold-grid-span-full md:scaffold-grid-span-third">
     <h2>visit</h2>
     <a class="primary-info" href="{{ site.data.contact.address.maps_url }}" target="_blank" rel="noopener noreferrer">{{ site.data.contact.address.street }}</a>
     <p class="secondary-info">{{ site.data.contact.address.city }}, {{ site.data.contact.address.state }} {{ site.data.contact.address.zip }}</p>
-
   </div>
 </section>
 
@@ -37,7 +36,7 @@ hero_headline: "Family dentistry, <em>unhurried.</em>"
   </div>
   {% assign services = site.services | sort: "order" %}
   {% for service in services %}
-    <div class="item-card scaffold-grid-span-third">
+    <div class="item-card scaffold-grid-span-full md:scaffold-grid-span-third">
       <h4>{{ service.title }}</h4>
       <p>{{ service.description }}</p>
     </div>
@@ -49,15 +48,15 @@ hero_headline: "Family dentistry, <em>unhurried.</em>"
     <h2>how we work</h2>
     <h3>Our promise for <em>every visit.</em></h3>
   </div>
-  <div class="item-card scaffold-grid-span-third">
+  <div class="item-card scaffold-grid-span-full md:scaffold-grid-span-third">
     <h4>No-pressure care</h4>
     <p>We won't sell you on work you don't need. If watching is the right call, we'll watch.</p>
   </div>
-  <div class="item-card scaffold-grid-span-third">
+  <div class="item-card scaffold-grid-span-full md:scaffold-grid-span-third">
     <h4>Family-first</h4>
     <p>Schedule the whole household in one block. Movies in the chair, prizes for the kids.</p>
   </div>
-  <div class="item-card scaffold-grid-span-third">
+  <div class="item-card scaffold-grid-span-full md:scaffold-grid-span-third">
     <h4>Plain-English plans</h4>
     <p>You'll leave knowing exactly what's recommended, what it costs, and what's optional.</p>
   </div>
