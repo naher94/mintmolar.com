@@ -26,4 +26,22 @@ body {
       }
     }
   }
+  .contact-stats{
+    .item-card{
+      @include scaffold.span(third);
+      h2{
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: var(--color-mint-dark);
+        font-weight: var(--font-bricolage-regular);
+      }
+      p{
+        margin: 0;
+      }
+      .primary-info{
+        font-size: 1.5em;
+        font-weight: var(--font-bricolage-bold);
+      }
+    }
+  }
 }

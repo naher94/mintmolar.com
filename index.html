@@ -4,6 +4,24 @@ hero_tag: "New Name. Same Great Care. →"
 hero_headline: "Family dentistry, <em>unhurried.</em>"
 ---
 
-<section> stats </section>
+<section class="contact-stats scaffold-grid">
+  <div class="item-card">
+    <h2>hours</h2>
+    <p class="primary-info">Mon - Fri ....</p>
+    <p class="secondary-info">secondary</p>
+  </div>
+  <div class="item-card">
+    <h2>call</h2>
+    <p class="primary-info">{{ site.data.contact.phone }}</p>
+    <p class="secondary-info">or text - same number</p>
+  </div>
+  <div class="item-card">
+    <h2>visit</h2>
+    <p class="primary-info">{{ site.data.contact.address.street }}</p>
+    <p class="secondary-info">{{ site.data.contact.address.city }}, {{ site.data.contact.address.state }} {{ site.data.contact.address.zip }}</p>
+
+  </div>
+</section>
+
 <section> what we do </section>
 <section> how we work </section>
