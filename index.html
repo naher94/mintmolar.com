@@ -7,6 +7,7 @@ hero_headline: "Family dentistry, <em>unhurried.</em>"
 <section class="contact-stats scaffold-grid">
   <div class="item-card">
     <h2>hours</h2>
+    <!-- TODO update this with the fancy closed thing -->
     {% for hour in site.data.contact.hours %}
       {% if hour.time != "Closed" %}
         <p class="primary-info">{{ hour.days }} · {{ hour.time }}</p>
@@ -28,5 +29,29 @@ hero_headline: "Family dentistry, <em>unhurried.</em>"
   </div>
 </section>
 
-<section> what we do </section>
-<section> how we work </section>
+<section class="what-we-do scaffold-grid">
+  <div class="scaffold-grid-span-full headline">
+    <h2>what we do</h2>
+    <h3>A full <em>family</em> practice under one roof.</h3>
+  </div>
+  services cards go here
+</section>
+
+<section class="how-we-work scaffold-grid">
+  <div class="scaffold-grid-span-full headline">
+    <h2>how we work</h2>
+    <h3>Our promise for <em>every visit.</em></h3>
+  </div>
+  <div class="item-card scaffold-grid-span-third">
+    <h4>No-pressure care</h4>
+    <p>We won't sell you on work you don't need. If watching is the right call, we'll watch.</p>
+  </div>
+  <div class="item-card scaffold-grid-span-third">
+    <h4>Family-first</h4>
+    <p>Schedule the whole household in one block. Movies in the chair, prizes for the kids.</p>
+  </div>
+  <div class="item-card scaffold-grid-span-third">
+    <h4>Plain-English plans</h4>
+    <p>You'll leave knowing exactly what's recommended, what it costs, and what's optional.</p>
+  </div>
+</section>
