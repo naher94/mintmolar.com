@@ -33,8 +33,7 @@ hero_headline: "Family dentistry, <em>unhurried.</em>"
   <div class="scaffold-grid-span-full headline">
     <h2>what we do</h2>
     <h3>A full <em>family</em> practice under one roof.</h3>
-    <!-- TODO link to services page -->
-    <a href="" class="services-link">Everything your family needs, under one roof. Explore all services -></a>
+    <a href="{{ site.baseurl }}/services" class="services-link">Everything your family needs, under one roof. Explore all services <span class="material-symbols-rounded">arrow_forward</span></a>
   </div>
   {% assign services = site.services | sort: "order" %}
   {% for service in services %}
