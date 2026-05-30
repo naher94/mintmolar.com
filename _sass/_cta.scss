@@ -31,7 +31,10 @@
         margin-block-end: 0.5em;
       }
       .main{
-        font-size: 1.5em;
+        font-size: 1.25em;
+        @include scaffold.breakpoint(md) {
+          font-size: 1.5em;
+        }
       }
       .secondary{
         font-weight: var(--font-bricolage-regular);
@@ -40,9 +43,7 @@
         margin-block-start: 1em;
         a{
           display: inline-block;
-          width: 4em;
-          text-align: center;
-          padding: 0.5rem 1.25rem;
+          padding: 0.5rem 2rem;
           color: inherit;
           text-decoration: none;
           border-radius: var(--number-round);
