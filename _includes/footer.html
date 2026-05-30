@@ -1,7 +1,7 @@
 <footer>
   <div class="scaffold-container">
 
-    <div class="scaffold-flex scaffold-justify-between">
+    <div class="mainfooter scaffold-flex scaffold-justify-between">
       <div>
         logo container
       </div>
@@ -14,9 +14,15 @@
         </div>
         <div class="nav-container scaffold-flex scaffold-flex-col">
           <h3>Connect</h3>
-          <p>{{ site.data.contact.address.street }}<br>{{ site.data.contact.address.city }}, {{ site.data.contact.address.state }} {{ site.data.contact.address.zip }}</p>
+          <a href="{{ site.data.contact.address.maps_url }}" target="_blank" rel="noopener noreferrer">{{ site.data.contact.address.street }}<br>{{ site.data.contact.address.city }}, {{ site.data.contact.address.state }} {{ site.data.contact.address.zip }}</a>
           <a href="tel:{{ site.data.contact.phone_link }}">{{ site.data.contact.phone }}</a>
           <a href="mailto:{{ site.data.contact.email }}">{{ site.data.contact.email }}</a>
+        </div>
+        <div class="nav-container scaffold-flex scaffold-flex-col">
+          <h3>Hours</h3>
+          {% for hour in site.data.contact.hours %}
+            <p>{{ hour.days }} · {{ hour.time }}</p>
+          {% endfor %}
         </div>
       </div>
     </div>

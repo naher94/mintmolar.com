@@ -7,6 +7,8 @@ address:
   city: "Frederick"
   state: "MD"
   zip: "21702"
+  maps_url: "https://maps.google.com/?q=65+Thomas+Johnson+Dr+Suite+B+Frederick+MD+21702"
+  # TODO update the Maps URL to the business URL not just address
 
 hours:
   - days: "Mon–Thu"

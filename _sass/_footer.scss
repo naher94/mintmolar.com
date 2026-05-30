@@ -3,6 +3,24 @@
 footer {
   background: var(--color-mint-light);
   padding-block: 3rem;
+  .mainfooter{
+    margin-block-end: 4em;
+  }
+  .nav-section{
+    gap: 4em;
+  }
+  .nav-container{
+    h3{
+      color: var(--color-mint-dark);
+      font-size: 0.75em;
+      font-weight: var(--font-bricolage-regular);
+      text-transform: uppercase;
+      margin: 0;
+    }
+    p{
+      margin: 0;
+    }
+  }
   .subfooter{
     color: var(--color-mint-dark);
     p{
@@ -19,12 +37,4 @@ footer {
       }
     }
   }
-  // .footer {
-  //   &__inner {
-  //     @include scaffold.container();
-  //     @include scaffold.flex();
-  //     justify-content: space-between;
-  //     align-items: flex-start;
-  //   }
-  // }
 }
