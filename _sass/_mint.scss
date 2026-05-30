@@ -21,6 +21,9 @@ body {
     .hero__tag-link{
       text-decoration: none;
       color: inherit;
+      background-color: var(--color-mint);
+      padding: 0.5rem 0.75rem 0.5rem 1.25rem;
+      border-radius: var(--number-round);
       &:hover{
         .arrow-animation{
           span{
