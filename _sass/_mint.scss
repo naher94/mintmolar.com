@@ -18,6 +18,16 @@ body {
     padding-block: 1em 3em;
     background: var(--color-mint-light);
     margin-block-end: 3em;
+    .hero__tag{
+      &:hover{
+        .arrow-animation{
+          span{
+            &.first{ transform: translateX(0.15em); }
+            &.second{ opacity: 1; transform: translateX(0.05em); }
+          }
+        }
+      }
+    }
     h1{
       font-weight: var(--font-bricolage-extrabold);
       font-size: clamp(2.5rem, 8vw, 5rem);
@@ -60,6 +70,21 @@ body {
       }
     }
   }
+  .arrow-animation{
+    display: inline-flex;
+    span{
+      display: inline-flex;
+      transition: var(--transition-tight-spring);
+      svg{
+        width: 0.6em;
+        height: 0.6em;
+        fill: currentColor;
+      }
+      &.first{ transform: translateX(0); }
+      &.second{ opacity: 0; transform: translateX(-0.5em); }
+    }
+  }
+
   .what-we-do, .how-we-work{
     margin-block-start: 6em;
     .headline{
@@ -95,6 +120,14 @@ body {
       margin-block-start: 0.5em;
       display: block;
       color: var(--color-mint-dark);
+      &:hover{
+        .arrow-animation{
+          span{
+            &.first{ transform: translateX(0.15em); }
+            &.second{ opacity: 1; transform: translateX(0.05em); }
+          }
+        }
+      }
     }
     .item-card{
       h4{
