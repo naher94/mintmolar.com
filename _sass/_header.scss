@@ -40,8 +40,8 @@ header {
 
     &__cta {
       @extend %header-link;
-      color: var(--color-white); //TODO this is not working
       background: var(--color-mint-dark);
+      color: var(--color-white);
       &:hover {
         background-color: var(--color-mint-extra-dark);
       }
