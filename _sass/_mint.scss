@@ -15,9 +15,12 @@ body {
     @include scaffold.container();
   }
   .hero{
-    padding-block: 1em 3em;
+    padding-block: 1em 2em;
     background: var(--color-mint-light);
     margin-block-end: 3em;
+    @include scaffold.breakpoint(md) {
+      padding-block: 1em 3em;
+    }
     .hero__tag-link{
       display: inline-flex;
       align-items: center;
