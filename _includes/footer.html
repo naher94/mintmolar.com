@@ -2,8 +2,8 @@
   <div class="scaffold-container">
 
     <div class="mainfooter scaffold-flex scaffold-justify-between">
-      <div>
-        logo container
+      <div class="logo-container">
+        {%- include mm-main-lockup.svg -%}
       </div>
       <div class="nav-section scaffold-flex">
         <div class="nav-container scaffold-flex scaffold-flex-col">
@@ -20,6 +20,7 @@
         </div>
         <div class="nav-container scaffold-flex scaffold-flex-col">
           <h3>Hours</h3>
+          <!-- TODO add the closed today thing here -->
           {% for hour in site.data.contact.hours %}
             <p>{{ hour.days }} · {{ hour.time }}</p>
           {% endfor %}

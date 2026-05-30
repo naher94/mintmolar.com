@@ -2,9 +2,15 @@
 
 footer {
   background: var(--color-mint-light);
-  padding-block: 3rem;
+  padding-block: 5rem;
+  margin-block-start: 5em;
   .mainfooter{
     margin-block-end: 4em;
+  }
+  .logo-container{
+    svg{
+      width: 20em;
+    }
   }
   .nav-section{
     gap: 4em;
