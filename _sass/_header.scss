@@ -10,9 +10,10 @@
   }
 }
 
-header{
+header {
   padding-block: 3em;
-  .site-header {
+
+  .header {
     &__inner {
       @include scaffold.flex($gap: 0);
       align-items: center;
