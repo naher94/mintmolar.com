@@ -14,6 +14,13 @@ footer {
   }
   .nav-section{
     gap: 4em;
+    a{
+      color: inherit;
+      text-decoration: none;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
   }
   .nav-container{
     h3{
