@@ -23,9 +23,10 @@
     }
     .content-area{
       text-wrap: balance;
-      // p{
-      //   margin: 0;
-      // }
+      p{
+        margin: 0;
+        margin-block-end: 0.5em;
+      }
       .main{
         font-size: 1.5em;
       }
