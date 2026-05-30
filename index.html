@@ -34,7 +34,13 @@ hero_headline: "Family dentistry, <em>unhurried.</em>"
     <h2>what we do</h2>
     <h3>A full <em>family</em> practice under one roof.</h3>
   </div>
-  services cards go here
+  {% assign services = site.services | sort: "order" %}
+  {% for service in services %}
+    <div class="item-card scaffold-grid-span-third">
+      <h4>{{ service.title }}</h4>
+      <p>{{ service.description }}</p>
+    </div>
+  {% endfor %}
 </section>
 
 <section class="how-we-work scaffold-grid">
