@@ -162,10 +162,18 @@ body {
 
   .doctor-card, .staff-card{
     .profile-container{
+      position: relative;
       aspect-ratio: 1/1;
       border-radius: 20px;
       overflow: hidden;
-      background-color: red;
+      &::after{
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        box-shadow: inset 0px 0px 0px 2px rgba(0, 0, 0, 0.1);
+        pointer-events: none;
+      }
     }
   }
   .doctor-card{
