@@ -12,7 +12,7 @@ content:
         label: Phone (display)
         type: string
       - name: phone_link
-        label: Phone (digits only, for tel: links)
+        label: "Phone (digits only, for tel links)"
         type: string
       - name: email
         label: Email
