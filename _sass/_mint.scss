@@ -4,6 +4,16 @@
   box-sizing: border-box;
 }
 
+.closed-dot{
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  background: #E63946;
+  vertical-align: middle;
+  margin-inline-start: 0.25em;
+}
+
 .banner{
   background: var(--color-mint-extra-dark);
   color: var(--color-white);
@@ -89,15 +99,6 @@ body {
         @include scaffold.breakpoint(md) {
           font-size: 1.5em;
         }
-      }
-      .closed-dot{
-        display: inline-block;
-        width: 0.5em;
-        height: 0.5em;
-        border-radius: 50%;
-        background: #E63946;
-        vertical-align: middle;
-        margin-inline-start: 0.25em;
       }
     }
   }

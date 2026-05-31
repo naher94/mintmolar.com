@@ -22,10 +22,21 @@
         </div>
         <div class="nav-container scaffold-flex scaffold-flex-col">
           <h3>Hours</h3>
-          <!-- TODO add the closed today thing here -->
+          <p class="footer-hours-holiday" hidden>Closed Today <span class="closed-dot"></span></p>
+
           {% for hour in site.data.contact.hours %}
             <p>{{ hour.days }} · {{ hour.time }}</p>
           {% endfor %}
+          <script>
+            (function() {
+              var holidays = {{ site.data.contact.holidays | jsonify }};
+              var d = new Date();
+              var today = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+              if (holidays.find(function(h) { return h.date === today; })) {
+                document.querySelector('.footer-hours-holiday').removeAttribute('hidden');
+              }
+            })();
+          </script>
         </div>
       </div>
     </div>
