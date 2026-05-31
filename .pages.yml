@@ -41,10 +41,7 @@ content:
     label: Hours
     type: file
     path: _data/hours.yml
-    list:
-      min: 7
-      max: 7
-      collapsible: true
+    list: true
     fields:
       - name: day
         label: Day
