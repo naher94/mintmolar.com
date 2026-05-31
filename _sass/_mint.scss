@@ -205,14 +205,21 @@ body {
     .bio{
       margin-block-start: 1em;
     }
-    .meta-label{
-      color: rgba(0, 0, 0, 0.5);
-      margin-inline-end: 0.5em;
-    }
-    .languages, .education{
-      margin-block-start: 0.5em;
-      padding-block: 0.5em;
-      border-top: solid 1px rgba(0, 0, 0, 0.1);
+    .member-meta{
+      width: 100%;
+      border-collapse: collapse;
+      margin-block-start: 1em;
+      td{
+        padding-block: 0.5em;
+        border-top: solid 1px rgba(0, 0, 0, 0.1);
+        vertical-align: top;
+      }
+      .meta-label{
+        color: rgba(0, 0, 0, 0.5);
+        white-space: nowrap;
+        padding-inline-end: 1em;
+        width: 1%;
+      }
     }
   }
   .doctor-card{

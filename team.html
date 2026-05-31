@@ -17,19 +17,22 @@ hero_headline: "The people who will be <em>taking care</em> of you."
         <p class="title">{{ member.title }}</p>
         <p class="bio">{{ member.bio }}</p>
         <!-- TODO add Education -->
-        {% if member.education.size > 0 %}
-        {% for edu in member.education %}
-        <div class="education">
-          <span class="meta-label">Education</span>
-          <span class="meta-value">{{ edu.degree }}, {{ edu.institution }}</span>
-        </div>
-        {% endfor %}
-        {% endif %}
-
-        <div class="languages">
-          <span class="meta-label">Languages</span>
-          <span class="meta-value">{{ member.languages | join: ", " }}</span>
-        </div>
+        <table class="member-meta">
+          {% if member.education.size > 0 %}
+            {% for edu in member.education %}
+            <tr>
+              <td class="meta-label">Education</td>
+              <td class="meta-value">{{ edu.degree }}, {{ edu.institution }}</td>
+            </tr>
+            {% endfor %}
+          {% endif %}
+          {% if member.languages %}
+          <tr>
+            <td class="meta-label">Languages</td>
+            <td class="meta-value">{{ member.languages | join: ", " }}</td>
+          </tr>
+          {% endif %}
+        </table>
       </div>
     </div>
     <!-- <div class="doctor-card scaffold-grid-span-full">
@@ -69,10 +72,14 @@ hero_headline: "The people who will be <em>taking care</em> of you."
         <h2>{{ member.name }}</h2>
         <p class="title">{{ member.title }}</p>
         <p class="bio">{{ member.bio }}</p>
-        <div class="languages">
-          <span class="meta-label">Languages</span>
-          <span class="meta-value">{{ member.languages | join: ", " }}</span>
-        </div>
+        <table class="member-meta">
+          {% if member.languages %}
+          <tr>
+            <td class="meta-label">Languages</td>
+            <td class="meta-value">{{ member.languages | join: ", " }}</td>
+          </tr>
+          {% endif %}
+        </table>
       </div>
     </div>
   {% endfor %}
