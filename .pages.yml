@@ -56,6 +56,50 @@ content:
         type: string
         description: "e.g. 8am - 5pm or Closed"
 
+  - name: team
+    label: Team
+    type: collection
+    path: _team
+    fields:
+      - name: name
+        label: Name
+        type: string
+      - name: title
+        label: Title
+        type: string
+        description: "e.g. Family Dentist DDS, Front Desk"
+      - name: role
+        label: Role
+        type: select
+        options:
+          values:
+            - doctor
+            - staff
+      - name: order
+        label: Order
+        type: number
+      - name: photo
+        label: Photo
+        type: image
+      - name: bio
+        label: Bio
+        type: text
+      - name: education
+        label: Education
+        type: object
+        list: true
+        fields:
+          - name: degree
+            label: Degree
+            type: string
+          - name: institution
+            label: Institution
+            type: string
+      - name: languages
+        label: Languages
+        type: string
+        list: true
+
   - name: services
     label: Services
     type: collection
