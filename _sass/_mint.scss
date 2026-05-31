@@ -90,6 +90,15 @@ body {
           font-size: 1.5em;
         }
       }
+      .closed-dot{
+        display: inline-block;
+        width: 0.5em;
+        height: 0.5em;
+        border-radius: 50%;
+        background: #E63946;
+        vertical-align: middle;
+        margin-inline-start: 0.25em;
+      }
     }
   }
   .arrow-animation{
