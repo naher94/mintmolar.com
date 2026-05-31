@@ -1,0 +1,15 @@
+<section class="cta-container">
+  <!-- TODO fix the width of the h2 and the content-area -->
+  <div class="cta-card scaffold-flex scaffold-flex-col md:scaffold-flex md:scaffold-flex-nowrap scaffold-justify-between scaffold-items-center">
+    <h2>A first visit you'll <em>actually</em> look forward to.</h2>
+
+    <div class="content-area">
+      <p class="main">New patients welcome. We'll make sure you feel right at home.</p>
+      <p class="secondary">Call or text us at {{ site.data.contact.phone }} to book your first appointment. We'd love to meet you.</p>
+      <div class="action-bar">
+        <a href="tel:{{ site.data.contact.phone_link }}">Call</a>
+        <a href="sms:{{ site.data.contact.phone_link }}">Text</a>
+      </div>
+    </div>
+  </div>
+</section>

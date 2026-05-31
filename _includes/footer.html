@@ -1,38 +1,55 @@
-<footer class="site-footer">
+<footer>
+  <div class="scaffold-container">
 
-  <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
+    <div class="mainfooter scaffold-flex scaffold-justify-between">
+      <div class="logo-container">
+        <a href="{{ site.baseurl }}/" aria-label="Mint and Molar - Home">
+          {%- include mm-main-lockup.svg -%}
+        </a>
       </div>
+      <div class="nav-section scaffold-flex">
+        <div class="nav-container scaffold-flex scaffold-flex-col">
+          <h3>Pages</h3>
+          <a class="" href="{{ site.baseurl }}/">Home</a>
+          <a class="" href="{{ site.baseurl }}/team">Team</a>
+          <a class="" href="{{ site.baseurl }}/services">Services</a>
+        </div>
+        <div class="nav-container scaffold-flex scaffold-flex-col">
+          <h3>Connect</h3>
+          <a href="{{ site.data.contact.address.maps_url }}" target="_blank" rel="noopener noreferrer">{{ site.data.contact.address.street }}<br>{{ site.data.contact.address.city }}, {{ site.data.contact.address.state }} {{ site.data.contact.address.zip }}</a>
+          <a href="tel:{{ site.data.contact.phone_link }}">{{ site.data.contact.phone }}</a>
+          <a href="mailto:{{ site.data.contact.email }}">{{ site.data.contact.email }}</a>
+        </div>
+        <div class="nav-container scaffold-flex scaffold-flex-col">
+          <h3>Hours</h3>
+          <p class="footer-hours-holiday" hidden>Closed Today <span class="closed-dot"></span></p>
 
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
+          {% for hour in site.data.contact.hours %}
+            <p>{{ hour.label }} · {{ hour.time }}</p>
+          {% endfor %}
+          <script>
+            (function() {
+              var holidays = {{ site.data.contact.holidays | jsonify }};
+              var d = new Date();
+              var today = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+              if (holidays.find(function(h) { return h.date === today; })) {
+                document.querySelector('.footer-hours-holiday').removeAttribute('hidden');
+              }
+            })();
+          </script>
+        </div>
       </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
+    </div>
+    <div class="subfooter scaffold-flex scaffold-justify-between">
+      <p class="copyright">© Mint + Molar Dental Care {{ 'now' | date: "%Y" }}</p>
+      <div class="policies scaffold-flex">
+        <a href="{{ site.baseurl }}/legal/privacy-policy">Privacy Policy</a>
+        <a href="{{ site.baseurl }}/legal/notice-of-privacy-practices">Notice of Privacy Practices</a>
+        <a href="{{ site.baseurl }}/legal/terms-of-use">Terms of Use</a>
+        <a href="{{ site.baseurl }}/legal/notice-of-non-discrimination">Notice of Non-Discrimination</a>
+        <a href="{{ site.baseurl }}/legal/accessibility">Accessibility</a>
       </div>
     </div>
 
   </div>
-
 </footer>

@@ -1,0 +1,21 @@
+{% if page.hero_tag or page.hero_headline or page.hero_subline %}
+<section class="hero">
+  <div class="scaffold-container hero__inner">
+
+    {% if page.hero_tag %}
+      <p class="hero__tag">
+        {% if page.hero_tag_link %}
+          <a href="{{ page.hero_tag_link }}" class="hero__tag-link">{{ page.hero_tag }} {% include arrow-animation.html %}</a>
+        {% else %}
+          {{ page.hero_tag }}
+        {% endif %}
+      </p>
+    {% endif %}
+
+    {% if page.hero_headline %}
+      <h1 class="hero__headline">{{ page.hero_headline | raw }}</h1>
+    {% endif %}
+
+  </div>
+</section>
+{% endif %}

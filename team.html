@@ -1,0 +1,61 @@
+---
+layout: default
+hero_headline: "The people who will be <em>taking care</em> of you."
+---
+
+{% assign doctors = site.team | where: "role", "doctor" | sort: "order" %}
+{% assign staff = site.team | where: "role", "staff" | sort: "order" %}
+
+<section class="doctors scaffold-grid">
+  {% for member in doctors %}
+    <div class="doctor-card scaffold-grid-span-full md:scaffold-grid-span-half scaffold-grid">
+      <div class="profile-container">
+        <img src="{{ site.baseurl }}/img/{{ member.photo }}" alt="{{ member.name }}">
+      </div>
+      <div class="content-container">
+        <h2>{{ member.name }}</h2>
+        <p class="title">{{ member.title }}</p>
+        <p class="bio">{{ member.bio }}</p>
+        <table class="member-meta">
+          {% if member.education.size > 0 %}
+            {% for edu in member.education %}
+            <tr>
+              <td class="meta-label">Education</td>
+              <td class="meta-value">{{ edu.degree }}, {{ edu.institution }}</td>
+            </tr>
+            {% endfor %}
+          {% endif %}
+          {% if member.languages %}
+          <tr>
+            <td class="meta-label">Languages</td>
+            <td class="meta-value">{{ member.languages | join: ", " }}</td>
+          </tr>
+          {% endif %}
+        </table>
+      </div>
+    </div>
+  {% endfor %}
+</section>
+
+<section class="staff scaffold-grid">
+  {% for member in staff %}
+    <div class="staff-card scaffold-grid-span-full md:scaffold-grid-span-quarter">
+      <div class="profile-container">
+        <img src="{{ site.baseurl }}/img/{{ member.photo }}" alt="{{ member.name }}">
+      </div>
+      <div class="content-container">
+        <h2>{{ member.name }}</h2>
+        <p class="title">{{ member.title }}</p>
+        <p class="bio">{{ member.bio }}</p>
+        <table class="member-meta">
+          {% if member.languages %}
+          <tr>
+            <td class="meta-label">Languages</td>
+            <td class="meta-value">{{ member.languages | join: ", " }}</td>
+          </tr>
+          {% endif %}
+        </table>
+      </div>
+    </div>
+  {% endfor %}
+</section>

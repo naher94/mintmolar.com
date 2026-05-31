@@ -1,0 +1,265 @@
+@use 'scaffold/scaffold' as scaffold;
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.closed-dot{
+  display: inline-flex;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  background: #E63946;
+  margin-inline-start: 0.25em;
+  vertical-align: middle;
+  position: relative;
+  top: -0.05em;
+}
+
+.banner{
+  background: var(--color-mint-extra-dark);
+  color: var(--color-white);
+  text-align: center;
+  padding-block: 0.75em;
+  p{
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: var(--font-bricolage-medium);
+  }
+}
+
+body {
+  background: var(--color-mint-extra-light);
+
+  font-family: var(--font-bricolage);
+  font-weight: var(--font-bricolage-regular);
+
+  margin: 0;
+  .page-content{
+    @include scaffold.container();
+  }
+  .hero{
+    padding-block: 1em 2em;
+    background: var(--color-mint-light);
+    margin-block-end: 3em;
+    @include scaffold.breakpoint(md) {
+      padding-block: 1em 3em;
+    }
+    .hero__tag-link{
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+      background-color: var(--color-mint);
+      padding: 0.5rem 0.75rem 0.5rem 1.25rem;
+      border-radius: var(--number-round);
+      &:hover{
+        .arrow-animation{
+          span{
+            &.first{ transform: translateX(0.15em); }
+            &.second{ opacity: 1; transform: translateX(0.05em); }
+          }
+        }
+      }
+    }
+    h1{
+      font-weight: var(--font-bricolage-extrabold);
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      margin: 0;
+      text-wrap: balance;
+      em{
+        font-family: var(--font-lora);
+        font-weight: var(--font-lora-regular);
+        font-style: var(--font-lora-italic);
+        color: var(--color-mint-dark);
+      }
+    }
+  }
+  .contact-stats{
+    .item-card{
+      h2{
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: var(--color-mint-dark);
+        font-weight: var(--font-bricolage-regular);
+        margin-top: 0;
+        margin-block-end: 0.3em;
+        @include scaffold.breakpoint(md) {
+          margin-block-end: 0.83em;
+        }
+      }
+      p{
+        margin: 0;
+      }
+      a{
+        text-decoration: none;
+        color: inherit;
+      }
+      .primary-info{
+        font-size: 1.25em;
+        font-weight: var(--font-bricolage-bold);
+        @include scaffold.breakpoint(md) {
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
+  .arrow-animation{
+    display: inline-flex;
+    span{
+      display: inline-flex;
+      transition: var(--transition-tight-spring);
+      svg{
+        width: 0.6em;
+        height: 0.6em;
+        fill: currentColor;
+      }
+      &.first{ transform: translateX(0); }
+      &.second{ opacity: 0; transform: translateX(-0.5em); }
+    }
+  }
+
+  .what-we-do, .how-we-work{
+    margin-block-start: 4em;
+    @include scaffold.breakpoint(md) {
+      margin-block-start: 6em;
+    }
+    .headline{
+      margin-block-end: 0;
+      @include scaffold.breakpoint(md) {
+        margin-block-end: 2em;
+      }
+    }
+    h2, h3{
+      margin: 0;
+    }
+    h2{
+      font-size: 1em;
+      text-transform: uppercase;
+      font-weight: var(--font-bricolage-regular);
+      color: var(--color-mint-dark);
+      @include scaffold.breakpoint(md) {
+        font-size: 1.25em;
+      }
+    }
+    h3{
+      font-size: clamp(2rem, 6vw, 4em);
+      font-weight: var(--font-bricolage-regular);
+      text-wrap: balance;
+      em{
+        font-family: var(--font-lora);
+        font-style: var(--font-lora-italic);
+        color: var(--color-mint-dark);
+      }
+    }
+    .services-link{
+      font-size: 1em;
+      text-decoration: none;
+      text-wrap: balance;
+      @include scaffold.breakpoint(md) {
+        font-size: 1.5em;
+      }
+      margin-block-start: 0.5em;
+      display: block;
+      color: var(--color-mint-dark);
+      &:hover{
+        .arrow-animation{
+          span{
+            &.first{ transform: translateX(0.15em); }
+            &.second{ opacity: 1; transform: translateX(0.05em); }
+          }
+        }
+      }
+    }
+    .item-card{
+      h4{
+        font-size: 1.5em;
+        margin: 0;
+        margin-block-end: 0.25em;
+      }
+      p{
+        margin: 0;
+        text-wrap: balance;
+      }
+    }
+  }
+
+  .doctors, .staff{
+    --scaffold-gap: 2rem;
+  }
+  .doctors{
+    margin-block-end: 6rem;
+  }
+  .doctor-card, .staff-card{
+    .profile-container{
+      position: relative;
+      aspect-ratio: 1/1;
+      border-radius: 20px;
+      overflow: hidden;
+      max-width: 60%;
+      @include scaffold.breakpoint(md) {
+        max-width: 100%;
+      }
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+      }
+      &::after{
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        box-shadow: inset 0px 0px 0px 2px rgba(0, 0, 0, 0.1);
+        pointer-events: none;
+      }
+    }
+    .content-container{
+      margin-block-start: 1rem;
+      @include scaffold.breakpoint(md) {
+        margin-block-start: 0.75rem;
+      }
+    }
+    h2, p{
+      margin: 0;
+    }
+    h2{
+      margin-block-end: 0.1em;
+    }
+    .title{
+      font-family: var(--font-lora);
+      font-style: var(--font-lora-italic);
+      font-weight: var(--font-lora-bold);
+      color: var(--color-mint-dark);
+    }
+    .bio{
+      margin-block-start: 1em;
+    }
+    .member-meta{
+      width: 100%;
+      border-collapse: collapse;
+      margin-block-start: 1em;
+      td{
+        padding-block: 0.5em;
+        border-top: solid 1px rgba(0, 0, 0, 0.1);
+        vertical-align: top;
+      }
+      .meta-label{
+        color: rgba(0, 0, 0, 0.5);
+        white-space: nowrap;
+        padding-inline-end: 1em;
+        width: 1%;
+      }
+    }
+  }
+  .doctor-card{
+    --scaffold-cols: 1fr;
+    --scaffold-gap: 0.5rem;
+    @include scaffold.breakpoint(md) {
+      --scaffold-cols: 1fr 1fr;
+      --scaffold-gap: 1rem;
+    }
+  }
+
+}

@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root {
+
+  // Typography
+
+  --font-lora: "Lora", serif;
+  --font-lora-italic: italic;
+  --font-lora-regular: 400;
+  --font-lora-medium: 500;
+  --font-lora-semibold: 600;
+  --font-lora-bold: 700;
+
+  --font-bricolage: "Bricolage Grotesque", sans-serif;
+  --font-bricolage-extralight: 200;
+  --font-bricolage-light: 300;
+  --font-bricolage-regular: 400;
+  --font-bricolage-medium: 500;
+  --font-bricolage-semibold: 600;
+  --font-bricolage-bold: 700;
+  --font-bricolage-extrabold: 800;
+
+
+// Colors
+
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  
+  --color-mint-extra-light: #F7FDFA;
+  --color-mint-light: #D8EDE3;
+  --color-mint: #9AC7B5;
+  --color-mint-dark: #2E5C50;
+  --color-mint-extra-dark: #10342A;
+
+
+// Numbers 
+
+  --number-round: 1000px;
+
+
+// Animations
+
+  --transition-sprint: all 0.20s ease-in-out;
+  --transition-run: all 0.30s ease-in-out;
+  --transition-jog: all 0.50s ease-in-out;
+  --transition-tight-spring: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
