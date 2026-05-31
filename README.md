@@ -57,10 +57,3 @@ When a date matches today, a banner appears site-wide and the hours card shows "
 
 ### Services (`_services/`)
 Ordered by the `order` field. Used on both the home page and the services page.
-
-## Pending
-
-- Favicon + Apple touch icon (assets needed)
-- `og:image` social share image (asset needed)
-- Geo coordinates for JSON-LD (lat/long for the practice location)
-- See [open issues](https://github.com/naher94/mintmolar.com/issues) for full list
