@@ -9,19 +9,3 @@ address:
   zip: "21702"
   maps_url: "https://maps.google.com/?q=65+Thomas+Johnson+Dr+Suite+B+Frederick+MD+21702"
   # TODO update the Maps URL to the business URL not just address
-
-hours:
-  - label: "Mon–Thu"
-    days: [monday, tuesday, wednesday, thursday]
-    time: "8am - 5pm"
-  - label: "Fri–Sun"
-    days: [friday, saturday, sunday]
-    time: "Closed"
-
-holidays:
-  - date: "2025-05-26"
-    message: "We're closed for Memorial Day and will reopen Tuesday, May 27th."
-  - date: "2025-07-04"
-    message: "We're closed for Independence Day and will reopen Monday, July 7th."
-  - date: "2026-05-30"
-    message: "We are closed. This is a test and will reopen later."

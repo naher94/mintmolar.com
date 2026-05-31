@@ -1,0 +1,6 @@
+- label: "Mon–Thu"
+  days: [monday, tuesday, wednesday, thursday]
+  time: "8am - 5pm"
+- label: "Fri–Sun"
+  days: [friday, saturday, sunday]
+  time: "Closed"

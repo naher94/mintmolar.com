@@ -24,12 +24,12 @@
           <h3>Hours</h3>
           <p class="footer-hours-holiday" hidden>Closed Today <span class="closed-dot"></span></p>
 
-          {% for hour in site.data.contact.hours %}
+          {% for hour in site.data.hours %}
             <p>{{ hour.label }} · {{ hour.time }}</p>
           {% endfor %}
           <script>
             (function() {
-              var holidays = {{ site.data.contact.holidays | jsonify }};
+              var holidays = {{ site.data.holidays | jsonify }};
               var d = new Date();
               var today = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
               if (holidays.find(function(h) { return h.date === today; })) {

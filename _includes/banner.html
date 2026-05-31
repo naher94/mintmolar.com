@@ -6,7 +6,7 @@
 
 <script>
   (function() {
-    var holidays = {{ site.data.contact.holidays | jsonify }};
+    var holidays = {{ site.data.holidays | jsonify }};
     var d = new Date();
     var today = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
     var match = holidays.find(function(h) { return h.date === today; });

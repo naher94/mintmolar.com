@@ -4,7 +4,7 @@ media:
 
 content:
   - name: contact
-    label: Contact & Hours
+    label: Contact
     type: file
     path: _data/contact.yml
     fields:
@@ -17,7 +17,6 @@ content:
       - name: email
         label: Email
         type: string
-
       - name: address
         label: Address
         type: object
@@ -38,42 +37,44 @@ content:
             label: Google Maps URL
             type: string
 
-      - name: hours
+  - name: hours
+    label: Hours
+    type: file
+    path: _data/hours.yml
+    list: true
+    fields:
+      - name: label
+        label: Days Label (display)
+        type: string
+        description: "e.g. Mon-Thu"
+      - name: days
+        label: Days (for logic)
+        type: select
+        options:
+          multiple: true
+          values:
+            - monday
+            - tuesday
+            - wednesday
+            - thursday
+            - friday
+            - saturday
+            - sunday
+      - name: time
         label: Hours
-        type: object
-        list: true
-        fields:
-          - name: label
-            label: Days Label (display)
-            type: string
-            description: "e.g. Mon-Thu"
-          - name: days
-            label: Days (for logic)
-            type: select
-            options:
-              multiple: true
-              values:
-                - monday
-                - tuesday
-                - wednesday
-                - thursday
-                - friday
-                - saturday
-                - sunday
-          - name: time
-            label: Hours
-            type: string
-            description: "e.g. 8am - 5pm or Closed"
+        type: string
+        description: "e.g. 8am - 5pm or Closed"
 
-      - name: holidays
-        label: Holiday Closures
-        type: object
-        list: true
-        fields:
-          - name: date
-            label: Date
-            type: date
-          - name: message
-            label: Banner Message
-            type: string
-            description: "Shown in the site banner and hours card on that date"
+  - name: holidays
+    label: Holiday Closures
+    type: file
+    path: _data/holidays.yml
+    list: true
+    fields:
+      - name: date
+        label: Date
+        type: date
+      - name: message
+        label: Banner Message
+        type: string
+        description: "Shown in the site banner and hours card on that date"
