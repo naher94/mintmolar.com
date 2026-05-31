@@ -16,7 +16,6 @@ hero_headline: "The people who will be <em>taking care</em> of you."
         <h2>{{ member.name }}</h2>
         <p class="title">{{ member.title }}</p>
         <p class="bio">{{ member.bio }}</p>
-        <!-- TODO add Education -->
         <table class="member-meta">
           {% if member.education.size > 0 %}
             {% for edu in member.education %}
@@ -35,30 +34,6 @@ hero_headline: "The people who will be <em>taking care</em> of you."
         </table>
       </div>
     </div>
-    <!-- <div class="doctor-card scaffold-grid-span-full">
-      <div class="doctor-card__photo">
-        <img src="{{ member.photo }}" alt="{{ member.name }}">
-      </div>
-      <div class="doctor-card__details">
-        <h2>{{ member.name }}</h2>
-        <p class="member-title">{{ member.title }}{% if member.credentials %} {{ member.credentials }}{% endif %}</p>
-        {% if member.bio %}<p class="member-bio">{{ member.bio }}</p>{% endif %}
-        {% if member.education.size > 0 %}
-          {% for edu in member.education %}
-            <div class="member-meta">
-              <span class="meta-label">Education</span>
-              <span class="meta-value">{{ edu.degree }}, {{ edu.institution }}</span>
-            </div>
-          {% endfor %}
-        {% endif %}
-        {% if member.languages %}
-          <div class="member-meta">
-            <span class="meta-label">Languages</span>
-            <span class="meta-value">{{ member.languages | join: ", " }}</span>
-          </div>
-        {% endif %}
-      </div>
-    </div> -->
   {% endfor %}
 </section>
 
