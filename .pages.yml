@@ -40,12 +40,13 @@ content:
 
       - name: hours
         label: Hours
-        type: list
+        type: object
+        list: true
         fields:
           - name: label
             label: Days Label (display)
             type: string
-            description: "e.g. Mon–Thu"
+            description: "e.g. Mon-Thu"
           - name: days
             label: Days (for logic)
             type: select
@@ -66,7 +67,8 @@ content:
 
       - name: holidays
         label: Holiday Closures
-        type: list
+        type: object
+        list: true
         fields:
           - name: date
             label: Date
