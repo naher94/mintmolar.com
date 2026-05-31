@@ -24,8 +24,22 @@
           <h3>Hours</h3>
           <p class="footer-hours-holiday" hidden>Closed Today <span class="closed-dot"></span></p>
 
+          {% assign group_start_abbr = "" %}
+          {% assign prev_abbr = "" %}
+          {% assign prev_time = "" %}
           {% for hour in site.data.hours %}
-            <p>{{ hour.label }} · {{ hour.time }}</p>
+            {% if prev_time != "" and hour.time != prev_time %}
+              {% if group_start_abbr == prev_abbr %}{% assign group_label = group_start_abbr %}{% else %}{% assign group_label = group_start_abbr | append: "–" | append: prev_abbr %}{% endif %}
+              <p>{{ group_label }} · {{ prev_time }}</p>
+              {% assign group_start_abbr = hour.abbr %}
+            {% endif %}
+            {% if group_start_abbr == "" %}{% assign group_start_abbr = hour.abbr %}{% endif %}
+            {% if forloop.last %}
+              {% if group_start_abbr == hour.abbr %}{% assign group_label = hour.abbr %}{% else %}{% assign group_label = group_start_abbr | append: "–" | append: hour.abbr %}{% endif %}
+              <p>{{ group_label }} · {{ hour.time }}</p>
+            {% endif %}
+            {% assign prev_abbr = hour.abbr %}
+            {% assign prev_time = hour.time %}
           {% endfor %}
           <script>
             (function() {

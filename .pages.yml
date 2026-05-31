@@ -41,25 +41,19 @@ content:
     label: Hours
     type: file
     path: _data/hours.yml
-    list: true
+    list:
+      min: 7
+      max: 7
+      collapsible: true
     fields:
-      - name: label
-        label: Days Label (display)
+      - name: day
+        label: Day
         type: string
-        description: "e.g. Mon-Thu"
-      - name: days
-        label: Days (for logic)
-        type: select
-        options:
-          multiple: true
-          values:
-            - monday
-            - tuesday
-            - wednesday
-            - thursday
-            - friday
-            - saturday
-            - sunday
+        readonly: true
+      - name: abbr
+        label: Abbreviation
+        type: string
+        hidden: true
       - name: time
         label: Hours
         type: string
