@@ -17,7 +17,15 @@ hero_headline: "The people who will be <em>taking care</em> of you."
         <p class="title">{{ member.title }}</p>
         <p class="bio">{{ member.bio }}</p>
         <!-- TODO add Education -->
-        <!-- TODO add Languages -->
+        {% if member.education.size > 0 %}
+        {% for edu in member.education %}
+        <div class="education">
+          <span class="meta-label">Education</span>
+          <span class="meta-value">{{ member.degree }}, {{ edu.institution }}</span>
+        </div>
+        {% endfor %}
+        {% endif %}
+
         <div class="languages">
           <span class="meta-label">Languages</span>
           <span class="meta-value">{{ member.languages | join: ", " }}</span>
