@@ -205,6 +205,15 @@ body {
     .bio{
       margin-block-start: 1em;
     }
+    .meta-label{
+      color: rgba(0, 0, 0, 0.5);
+      margin-inline-end: 0.5em;
+    }
+    .languages{
+      margin-block-start: 0.5em;
+      padding-block: 0.5em;
+      border-top: solid 1px rgba(0, 0, 0, 0.1);
+    }
   }
   .doctor-card{
     --scaffold-cols: 1fr 1fr;
