@@ -75,9 +75,9 @@ content:
     list:
       collapsible:
         collapsed: true
-        summary: "{name}"
+        summary: "{title}"
     fields:
-      - name: name
+      - name: title
         label: Name
         type: string
         description: "e.g. Thanksgiving, Christmas Day"
