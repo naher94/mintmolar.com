@@ -42,7 +42,11 @@ content:
     type: file
     path: _data/hours.yml
     list:
-      collapsible: true
+    min: 1
+    max: 6
+    collapsible:
+      collapsed: true
+      summary: "{title} ({index})"
     fields:
       - name: day
         label: Day
