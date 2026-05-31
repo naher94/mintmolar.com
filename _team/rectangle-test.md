@@ -1,7 +1,6 @@
 ---
 name: "Dr. Rectangle Test"
-title: "Family Dentist"
-credentials: "DDS"
+title: "Dentist"
 role: doctor # doctor | staff
 order: 2
 
@@ -18,4 +17,6 @@ education:
 
 languages:
   - English
+  - Spanish
+  - French
 ---

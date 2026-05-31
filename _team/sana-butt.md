@@ -1,7 +1,6 @@
 ---
 name: "Dr. Sana J. Butt"
-title: "Family Dentist"
-credentials: "DDS"
+title: "Family Dentist DDS"
 role: doctor          # doctor | staff
 order: 1
 

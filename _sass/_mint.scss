@@ -166,6 +166,7 @@ body {
       aspect-ratio: 1/1;
       border-radius: 20px;
       overflow: hidden;
+      // TODO update image alignment and placement in the container
       &::after{
         content: '';
         position: absolute;
@@ -174,6 +175,24 @@ body {
         box-shadow: inset 0px 0px 0px 2px rgba(0, 0, 0, 0.1);
         pointer-events: none;
       }
+    }
+    .content-container{
+      margin-block-start: 0.5em;
+    }
+    h2, p{
+      margin: 0;
+    }
+    h2{
+      margin-block-end: 0.1em;
+    }
+    .title{
+      font-family: var(--font-lora);
+      font-style: var(--font-lora-italic);
+      font-weight: var(--font-lora-bold);
+      color: var(--color-mint-dark);
+    }
+    .bio{
+      margin-block-start: 1em;
     }
   }
   .doctor-card{
