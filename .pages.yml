@@ -56,6 +56,21 @@ content:
         type: string
         description: "e.g. 8am - 5pm or Closed"
 
+  - name: services
+    label: Services
+    type: collection
+    path: _services
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: description
+        label: Description
+        type: text
+      - name: order
+        label: Order
+        type: number
+
   - name: holidays
     label: Holiday Closures
     type: file
