@@ -132,3 +132,63 @@ content:
         label: Banner Message
         type: string
         description: "Shown in the site banner"
+
+  - name: legal
+    label: Legal
+    type: group
+    items:
+      - name: privacy-policy
+        label: Privacy Policy
+        type: file
+        path: legal/privacy-policy.md
+        fields:
+          - name: title
+            label: Title
+            type: string
+          - name: body
+            label: Content
+            type: rich-text
+      - name: notice-of-privacy-practices
+        label: Notice of Privacy Practices
+        type: file
+        path: legal/notice-of-privacy-practices.md
+        fields:
+          - name: title
+            label: Title
+            type: string
+          - name: body
+            label: Content
+            type: rich-text
+      - name: terms-of-use
+        label: Terms of Use
+        type: file
+        path: legal/terms-of-use.md
+        fields:
+          - name: title
+            label: Title
+            type: string
+          - name: body
+            label: Content
+            type: rich-text
+      - name: notice-of-non-discrimination
+        label: Notice of Non-Discrimination
+        type: file
+        path: legal/notice-of-non-discrimination.md
+        fields:
+          - name: title
+            label: Title
+            type: string
+          - name: body
+            label: Content
+            type: rich-text
+      - name: accessibility
+        label: Accessibility
+        type: file
+        path: legal/accessibility.md
+        fields:
+          - name: title
+            label: Title
+            type: string
+          - name: body
+            label: Content
+            type: rich-text
