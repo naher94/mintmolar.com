@@ -41,7 +41,10 @@ content:
     label: Hours
     type: file
     path: _data/hours.yml
-    list: true
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{label} · {time}"
     fields:
       - name: label
         label: Days Label (display)
@@ -69,8 +72,15 @@ content:
     label: Holiday Closures
     type: file
     path: _data/holidays.yml
-    list: true
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{name}"
     fields:
+      - name: name
+        label: Name
+        type: string
+        description: "e.g. Thanksgiving, Christmas Day"
       - name: date
         label: Date
         type: date
