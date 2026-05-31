@@ -160,13 +160,24 @@ body {
     }
   }
 
+  .doctors, .staff{
+    --scaffold-gap: 2rem;
+  }
+  .doctors{
+    margin-block-end: 4rem;
+  }
   .doctor-card, .staff-card{
     .profile-container{
       position: relative;
       aspect-ratio: 1/1;
       border-radius: 20px;
       overflow: hidden;
-      // TODO update image alignment and placement in the container
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+      }
       &::after{
         content: '';
         position: absolute;
@@ -196,7 +207,6 @@ body {
     }
   }
   .doctor-card{
-    // --scaffold-cols: 5fr 7fr;
     --scaffold-cols: 1fr 1fr;
   }
 
