@@ -41,7 +41,8 @@ content:
     label: Hours
     type: file
     path: _data/hours.yml
-    list: true
+    list:
+      collapsible: true
     fields:
       - name: day
         label: Day
