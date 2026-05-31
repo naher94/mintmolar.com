@@ -69,8 +69,15 @@ content:
     label: Holiday Closures
     type: file
     path: _data/holidays.yml
-    list: true
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{holiday}"
     fields:
+      - name: holiday
+        label: Holiday Name
+        type: string
+        description: "e.g. Thanksgiving, Christmas Day"
       - name: date
         label: Date
         type: date
