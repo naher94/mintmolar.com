@@ -72,4 +72,4 @@ content:
       - name: message
         label: Banner Message
         type: string
-        description: "Shown in the site banner and hours card on that date"
+        description: "Shown in the site banner"
