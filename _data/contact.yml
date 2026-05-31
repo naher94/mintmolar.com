@@ -15,3 +15,11 @@ hours:
     time: "8am - 5pm"
   - days: "Fri–Sun"
     time: "Closed"
+
+holidays:
+  - date: "2025-05-26"
+    message: "We're closed for Memorial Day and will reopen Tuesday, May 27th."
+  - date: "2025-07-04"
+    message: "We're closed for Independence Day and will reopen Monday, July 7th."
+  - date: "2026-05-30"
+    message: "We are closed. We're closed for Memorial Day and will reopen Tuesday, May 27th."

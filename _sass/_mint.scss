@@ -4,6 +4,18 @@
   box-sizing: border-box;
 }
 
+.banner{
+  background: var(--color-mint-extra-dark);
+  color: var(--color-white);
+  text-align: center;
+  padding-block: 0.75em;
+  p{
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: var(--font-bricolage-medium);
+  }
+}
+
 body {
   background: var(--color-mint-extra-light);
 

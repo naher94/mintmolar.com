@@ -1,3 +1,18 @@
-<div class="banner">
-  We're closed for Memorial Day and will reopen Tuesday, May 27th.
+<div class="banner" id="holiday-banner" hidden>
+  <div class="scaffold-container">
+    <p id="holiday-message"></p>
+  </div>
 </div>
+
+<script>
+  (function() {
+    var holidays = {{ site.data.contact.holidays | jsonify }};
+    var d = new Date();
+    var today = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+    var match = holidays.find(function(h) { return h.date === today; });
+    if (match) {
+      document.getElementById('holiday-message').textContent = match.message;
+      document.getElementById('holiday-banner').removeAttribute('hidden');
+    }
+  })();
+</script>
