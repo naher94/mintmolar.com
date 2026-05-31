@@ -5,7 +5,7 @@ credentials:          # leave blank if no credentials (e.g. DDS, RDH)
 role: staff           # doctor | staff — controls layout (staff gets grid card)
 order: 2
 
-photo: "test-image-square.png"
+photo: /assets/images/test-image-square-1.png
 
 bio: >
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget lacinia nisl.
