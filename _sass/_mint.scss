@@ -5,13 +5,15 @@
 }
 
 .closed-dot{
-  display: inline-block;
+  display: inline-flex;
   width: 0.5em;
   height: 0.5em;
   border-radius: 50%;
   background: #E63946;
-  vertical-align: middle;
   margin-inline-start: 0.25em;
+  vertical-align: middle;
+  position: relative;
+  top: -0.05em;
 }
 
 .banner{
