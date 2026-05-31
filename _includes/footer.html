@@ -25,7 +25,7 @@
           <p class="footer-hours-holiday" hidden>Closed Today <span class="closed-dot"></span></p>
 
           {% for hour in site.data.contact.hours %}
-            <p>{{ hour.days }} · {{ hour.time }}</p>
+            <p>{{ hour.label }} · {{ hour.time }}</p>
           {% endfor %}
           <script>
             (function() {

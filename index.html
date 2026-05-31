@@ -9,13 +9,13 @@ hero_headline: "Family dentistry, <em>unhurried.</em>"
   <div class="item-card scaffold-grid-span-full md:scaffold-grid-span-third">
     <h2>hours</h2>
     <p class="primary-info hours-holiday" hidden>Closed Today <span class="closed-dot"></span></p>
-    <p class="secondary-info hours-holiday" hidden>{% for hour in site.data.contact.hours %}{{ hour.days }} · {{ hour.time }}{% unless forloop.last %} | {% endunless %}{% endfor %}</p>
+    <p class="secondary-info hours-holiday" hidden>{% for hour in site.data.contact.hours %}{{ hour.label }} · {{ hour.time }}{% unless forloop.last %} | {% endunless %}{% endfor %}</p>
     <div class="hours-regular">
       {% for hour in site.data.contact.hours %}
         {% if hour.time != "Closed" %}
-          <p class="primary-info">{{ hour.days }} · {{ hour.time }}</p>
+          <p class="primary-info">{{ hour.label }} · {{ hour.time }}</p>
         {% else %}
-          <p class="secondary-info">{{ hour.days }} · {{ hour.time }}</p>
+          <p class="secondary-info">{{ hour.label }} · {{ hour.time }}</p>
         {% endif %}
       {% endfor %}
     </div>

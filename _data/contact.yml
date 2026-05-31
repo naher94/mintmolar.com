@@ -11,9 +11,11 @@ address:
   # TODO update the Maps URL to the business URL not just address
 
 hours:
-  - days: "Mon–Thu"
+  - label: "Mon–Thu"
+    days: [monday, tuesday, wednesday, thursday]
     time: "8am - 5pm"
-  - days: "Fri–Sun"
+  - label: "Fri–Sun"
+    days: [friday, saturday, sunday]
     time: "Closed"
 
 holidays:
@@ -22,4 +24,4 @@ holidays:
   - date: "2025-07-04"
     message: "We're closed for Independence Day and will reopen Monday, July 7th."
   - date: "2026-05-30"
-    message: "We are closed. We're closed for Memorial Day and will reopen Tuesday, May 27th."
+    message: "We are closed. This is a test and will reopen later."
