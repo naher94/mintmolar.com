@@ -8,7 +8,7 @@ hero_headline: "The people who will be <em>taking care</em> of you."
 
 <section class="doctors scaffold-grid">
   {% for member in doctors %}
-    <div class="doctor-card scaffold-grid-span-half scaffold-grid">
+    <div class="doctor-card scaffold-grid-span-full md:scaffold-grid-span-half scaffold-grid">
       <div class="profile-container">
         <img src="{{ site.baseurl }}/img/{{ member.photo }}" alt="{{ member.name }}">
       </div>
@@ -47,7 +47,17 @@ hero_headline: "The people who will be <em>taking care</em> of you."
 
 <section class="staff scaffold-grid">
   {% for member in staff %}
-    <!-- <div class="staff-card scaffold-grid-span-full md:scaffold-grid-span-third">
+    <div class="staff-card scaffold-grid-span-full md:scaffold-grid-span-quarter">
+      <div class="profile-container">
+        <img src="{{ site.baseurl }}/img/{{ member.photo }}" alt="{{ member.name }}">
+      </div>
+      <div class="content-container">
+        <h2>{{ member.name }}</h2>
+        <p class="title">{{ member.title }}</p>
+        <p class="bio"> {{ member.bio }} </p>
+      </div>
+    </div>
+    <!-- <div class="staff-card scaffold-grid-span-full md:scaffold-grid-span-quarter">
       <div class="staff-card__photo">
         <img src="{{ member.photo }}" alt="{{ member.name }}">
       </div>
