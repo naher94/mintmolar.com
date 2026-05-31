@@ -1,0 +1,77 @@
+media:
+  input: assets/images
+  output: /assets/images
+
+content:
+  - name: contact
+    label: Contact & Hours
+    type: file
+    path: _data/contact.yml
+    fields:
+      - name: phone
+        label: Phone (display)
+        type: string
+      - name: phone_link
+        label: Phone (digits only, for tel: links)
+        type: string
+      - name: email
+        label: Email
+        type: string
+
+      - name: address
+        label: Address
+        type: object
+        fields:
+          - name: street
+            label: Street
+            type: string
+          - name: city
+            label: City
+            type: string
+          - name: state
+            label: State
+            type: string
+          - name: zip
+            label: ZIP Code
+            type: string
+          - name: maps_url
+            label: Google Maps URL
+            type: string
+
+      - name: hours
+        label: Hours
+        type: list
+        fields:
+          - name: label
+            label: Days Label (display)
+            type: string
+            description: "e.g. Mon–Thu"
+          - name: days
+            label: Days (for logic)
+            type: select
+            options:
+              multiple: true
+              values:
+                - monday
+                - tuesday
+                - wednesday
+                - thursday
+                - friday
+                - saturday
+                - sunday
+          - name: time
+            label: Hours
+            type: string
+            description: "e.g. 8am - 5pm or Closed"
+
+      - name: holidays
+        label: Holiday Closures
+        type: list
+        fields:
+          - name: date
+            label: Date
+            type: date
+          - name: message
+            label: Banner Message
+            type: string
+            description: "Shown in the site banner and hours card on that date"
