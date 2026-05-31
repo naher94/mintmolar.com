@@ -223,7 +223,10 @@ body {
     }
   }
   .doctor-card{
-    --scaffold-cols: 1fr 1fr;
+    --scaffold-cols: 1fr;
+    @include scaffold.breakpoint(md) {
+      --scaffold-cols: 1fr 1fr;
+    }
   }
 
 }
