@@ -6,6 +6,7 @@
   {% assign page_title = page.title | default: site.title %}
   {% assign page_description = page.description | default: site.description | strip_html | strip_newlines | truncate: 160 %}
   {% assign page_url = page.url | replace: 'index.html', '' | absolute_url %}
+  {% assign share_image = page.image | default: "/assets/share-image.jpg" | absolute_url %}
 
   <title>{% if page.title %}{{ page.title | escape }} · {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{{ page_description }}">
@@ -22,14 +23,16 @@
   <meta property="og:description" content="{{ page_description }}">
   <meta property="og:url" content="{{ page_url }}">
   <meta property="og:site_name" content="{{ site.title | escape }}">
+  <meta property="og:image" content="{{ share_image }}">
   {% if page.layout == 'post' %}
   <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
   {% endif %}
 
   <!-- Twitter/X Card -->
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ page_title | escape }}">
   <meta name="twitter:description" content="{{ page_description }}">
+  <meta name="twitter:image" content="{{ share_image }}">
 
   <!-- JSON-LD -->
   {% include jsonld.html %}
