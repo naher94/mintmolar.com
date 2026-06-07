@@ -25,9 +25,23 @@ header {
       justify-content: space-between;
     }
 
+    // Logo and actions get equal flex-basis so the centered nav lands at the
+    // true midpoint of the header, regardless of how wide each side actually is.
+    &__logo,
+    &__actions {
+      flex: 1 0 0;
+    }
+
+    &__actions {
+      @include scaffold.flex($gap: 0.25rem);
+      align-items: center;
+      justify-content: flex-end;
+    }
+
     &__nav {
       @include scaffold.flex($gap: 0.25rem);
       align-items: center;
+      justify-content: center;
       display: none;
       @include scaffold.breakpoint(md) {
         display: flex;
@@ -36,11 +50,6 @@ header {
 
     &__nav-link {
       @extend %header-link;
-    }
-
-    &__actions {
-      @include scaffold.flex($gap: 0.25rem);
-      align-items: center;
     }
 
     &__phone {
