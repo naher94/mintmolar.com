@@ -7,5 +7,6 @@ address:
   city: "Frederick"
   state: "MD"
   zip: "21702"
-  maps_url: "https://maps.google.com/?q=65+Thomas+Johnson+Dr+Suite+B+Frederick+MD+21702"
-  # TODO update the Maps URL to the business URL not just address
+  latitude: 39.45075
+  longitude: -77.40295
+  maps_url: "https://maps.app.goo.gl/xeavnVbdADGty2389"

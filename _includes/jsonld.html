@@ -14,6 +14,11 @@
     "postalCode": "{{ site.data.contact.address.zip }}",
     "addressCountry": "US"
   },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": {{ site.data.contact.address.latitude }},
+    "longitude": {{ site.data.contact.address.longitude }}
+  },
   "openingHoursSpecification": [
     {% for hour in site.data.hours %}{% unless hour.time == "Closed" %}{% for day in hour.days %}
     {
