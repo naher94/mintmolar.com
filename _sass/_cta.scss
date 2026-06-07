@@ -65,12 +65,11 @@
             &:hover{
               // TODO update this color
               background: var(--color-mint);
+              color: var(--color-black);
             }
           }
           &:last-of-type{
             box-shadow: inset 0 0 0 2px var(--color-mint-dark);
-            // outline: 2px solid var(--color-mint-dark);
-            // border: 2px solid var(--color-mint-dark);
             &:hover{
               background: var(--color-mint-dark);
             }
