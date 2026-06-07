@@ -16,6 +16,57 @@
   top: -0.05em;
 }
 
+.post--blog {
+  .post-header {
+    margin-block-start: 4em;
+
+    @include scaffold.breakpoint(md) {
+      margin-block-start: 5em;
+    }
+
+    .post-title {
+      margin-block-end: 0.25em;
+    }
+
+    .post-meta {
+      margin-block-start: 0;
+    }
+  }
+
+  .post-content {
+    margin-block-start: 2em;
+
+    @include scaffold.breakpoint(md) {
+      margin-block-start: 3em;
+    }
+
+    blockquote {
+      margin: 2em 0;
+      padding: 1em 1.5em;
+      background: var(--color-mint-light);
+      font-size: 1.25em;
+      border-radius: 20px;
+      p {
+        margin: 0;
+      }
+    }
+
+    .post-signature {
+      margin-block-start: 2em;
+      font-weight: var(--font-bricolage-bold);
+      line-height: 1.6;
+    }
+  }
+
+  .post-content--narrow{
+    grid-column: 1 / -1;
+
+    @include scaffold.breakpoint(md) {
+      grid-column: 3 / span 8;
+    }
+  }
+}
+
 .banner{
   background: var(--color-mint-extra-dark);
   color: var(--color-white);
