@@ -1,0 +1,33 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "{{ site.title }}",
+  "url": "{{ site.url }}",
+  "telephone": "{{ site.data.contact.phone }}",
+  "email": "{{ site.data.contact.email }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ site.data.contact.address.street }}",
+    "addressLocality": "{{ site.data.contact.address.city }}",
+    "addressRegion": "{{ site.data.contact.address.state }}",
+    "postalCode": "{{ site.data.contact.address.zip }}",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": {{ site.data.contact.address.latitude }},
+    "longitude": {{ site.data.contact.address.longitude }}
+  },
+  "openingHoursSpecification": [
+    {% for hour in site.data.hours %}{% unless hour.time == "Closed" %}{% for day in hour.days %}
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "{{ day | capitalize }}",
+      "opens": "08:00",
+      "closes": "17:00"
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}{% endunless %}{% unless forloop.last %},{% endunless %}{% endfor %}
+  ]
+}
+</script>

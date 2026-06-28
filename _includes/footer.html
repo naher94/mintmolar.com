@@ -24,12 +24,26 @@
           <h3>Hours</h3>
           <p class="footer-hours-holiday" hidden>Closed Today <span class="closed-dot"></span></p>
 
-          {% for hour in site.data.contact.hours %}
-            <p>{{ hour.label }} · {{ hour.time }}</p>
+          {% assign group_start_abbr = "" %}
+          {% assign prev_abbr = "" %}
+          {% assign prev_time = "" %}
+          {% for hour in site.data.hours %}
+            {% if prev_time != "" and hour.time != prev_time %}
+              {% if group_start_abbr == prev_abbr %}{% assign group_label = group_start_abbr %}{% else %}{% assign group_label = group_start_abbr | append: "–" | append: prev_abbr %}{% endif %}
+              <p>{{ group_label }} · {{ prev_time }}</p>
+              {% assign group_start_abbr = hour.abbr %}
+            {% endif %}
+            {% if group_start_abbr == "" %}{% assign group_start_abbr = hour.abbr %}{% endif %}
+            {% if forloop.last %}
+              {% if group_start_abbr == hour.abbr %}{% assign group_label = hour.abbr %}{% else %}{% assign group_label = group_start_abbr | append: "–" | append: hour.abbr %}{% endif %}
+              <p>{{ group_label }} · {{ hour.time }}</p>
+            {% endif %}
+            {% assign prev_abbr = hour.abbr %}
+            {% assign prev_time = hour.time %}
           {% endfor %}
           <script>
             (function() {
-              var holidays = {{ site.data.contact.holidays | jsonify }};
+              var holidays = {{ site.data.holidays | jsonify }};
               var d = new Date();
               var today = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
               if (holidays.find(function(h) { return h.date === today; })) {
@@ -43,11 +57,7 @@
     <div class="subfooter scaffold-flex scaffold-justify-between">
       <p class="copyright">© Mint + Molar Dental Care {{ 'now' | date: "%Y" }}</p>
       <div class="policies scaffold-flex">
-        <a href="{{ site.baseurl }}/legal/privacy-policy">Privacy Policy</a>
-        <a href="{{ site.baseurl }}/legal/notice-of-privacy-practices">Notice of Privacy Practices</a>
-        <a href="{{ site.baseurl }}/legal/terms-of-use">Terms of Use</a>
-        <a href="{{ site.baseurl }}/legal/notice-of-non-discrimination">Notice of Non-Discrimination</a>
-        <a href="{{ site.baseurl }}/legal/accessibility">Accessibility</a>
+        <a href="{{ site.baseurl }}/assets/notice-of-privacy-practices.pdf" target="_blank">Notice of Privacy Practices</a>
       </div>
     </div>
 

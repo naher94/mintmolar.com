@@ -6,9 +6,17 @@ hero_headline: "A full <em>family</em> practice under one roof."
 {% assign services = site.services | sort: "order" %}
 <section class="services-list scaffold-grid">
   {% for service in services %}
-    <div class="service-card scaffold-grid-span-full md:scaffold-grid-span-third">
+    <div class="service-card scaffold-grid-span-full md:scaffold-grid-span-half">
       <h2>{{ service.title }}</h2>
       <p>{{ service.description }}</p>
+      {% if service.features.size > 0 %}
+      <p>Our {{ service.title | downcase }} services include:</p>
+      <ul>
+        {% for feature in service.features %}
+        <li>{{ feature }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
     </div>
   {% endfor %}
 </section>
