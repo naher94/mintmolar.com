@@ -10,7 +10,11 @@ hero_headline: "The people who will be <em>taking care</em> of you."
   {% for member in doctors %}
     <div class="doctor-card scaffold-grid-span-full md:scaffold-grid-span-half scaffold-grid">
       <div class="profile-container">
-        <img src="{{ member.photo }}" alt="{{ member.name }}">
+        {% if member.photo %}
+          <img src="{{ member.photo }}" alt="{{ member.name }}">
+        {% else %}
+          <div class="photo-placeholder"></div>
+        {% endif %}
       </div>
       <div class="content-container">
         <h2>{{ member.name }}</h2>
@@ -41,7 +45,11 @@ hero_headline: "The people who will be <em>taking care</em> of you."
   {% for member in staff %}
     <div class="staff-card scaffold-grid-span-full md:scaffold-grid-span-quarter">
       <div class="profile-container">
-        <img src="{{ member.photo }}" alt="{{ member.name }}">
+        {% if member.photo %}
+          <img src="{{ member.photo }}" alt="{{ member.name }}">
+        {% else %}
+          <div class="photo-placeholder"></div>
+        {% endif %}
       </div>
       <div class="content-container">
         <h2>{{ member.name }}</h2>

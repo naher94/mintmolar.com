@@ -258,6 +258,11 @@ body {
         object-position: center top;
         filter: grayscale(100%);
       }
+      .photo-placeholder{
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, var(--color-mint-light), var(--color-mint), var(--color-mint-dark));
+      }
       &::after{
         content: '';
         position: absolute;
