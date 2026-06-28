@@ -1,5 +1,5 @@
 ---
-name: "Deanna LastName"
+name: "Aubrey Fox"
 title: "Front Desk"
 credentials:          # leave blank if no credentials (e.g. DDS, RDH)
 role: staff           # doctor | staff — controls layout (staff gets grid card)
