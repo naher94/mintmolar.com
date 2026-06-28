@@ -4,7 +4,7 @@ hero_headline: "The people who will be <em>taking care</em> of you."
 ---
 
 {% assign doctors = site.team | where: "role", "doctor" | sort: "order" %}
-{% assign staff = site.team | where: "role", "staff" | sort: "order" %}
+{% assign staff = site.team | where: "role", "staff" | sort: "name" %}
 
 <section class="doctors scaffold-grid">
   {% for member in doctors %}
