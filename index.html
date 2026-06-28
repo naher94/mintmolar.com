@@ -77,7 +77,7 @@ hero_headline: "Family dentistry, <em>unhurried.</em>"
   </div>
   {% assign services = site.services | sort: "order" %}
   {% for service in services %}
-    <div class="item-card scaffold-grid-span-full md:scaffold-grid-span-third">
+    <div class="item-card scaffold-grid-span-full md:scaffold-grid-span-half">
       <h4>{{ service.title }}</h4>
       <p>{{ service.description }}</p>
     </div>
