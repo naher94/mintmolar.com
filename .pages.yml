@@ -131,10 +131,6 @@ content:
       - name: description
         label: Description
         type: text
-      - name: features_label
-        label: Service List Label
-        type: string
-        description: "e.g. Our preventive services include:"
       - name: features
         label: Service List
         type: string

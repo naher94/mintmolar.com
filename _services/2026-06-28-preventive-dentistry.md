@@ -5,7 +5,6 @@ description: Preventive dentistry is the foundation of a healthy smile. Through
   help identify concerns early and prevent dental problems before they become
   more serious. We also provide personalized guidance to help you maintain
   excellent oral health between visits.
-features_label: "Our preventive services include:"
 features:
   - Comprehensive and routine dental examinations
   - Oral cancer screenings

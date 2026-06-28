@@ -57,5 +57,4 @@ When a date matches today, a banner appears site-wide and the hours card shows "
 
 ### Services (`_services/`)
 Ordered by the `order` field. Used on both the home page and the services page.
-- `features_label` — intro text shown before the list (e.g. "Our preventive services include:")
-- `features` — bullet list of individual services, displayed only on the services page
+- `features` — bullet list of individual services, displayed only on the services page with an auto-generated "Our [title] services include:" label
