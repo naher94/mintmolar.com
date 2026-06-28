@@ -80,13 +80,6 @@ hero_headline: "Family dentistry, <em>unhurried.</em>"
     <div class="item-card scaffold-grid-span-full md:scaffold-grid-span-third">
       <h4>{{ service.title }}</h4>
       <p>{{ service.description }}</p>
-      {% if service.features.size > 0 %}
-      <ul>
-        {% for feature in service.features %}
-        <li>{{ feature }}</li>
-        {% endfor %}
-      </ul>
-      {% endif %}
     </div>
   {% endfor %}
 </section>

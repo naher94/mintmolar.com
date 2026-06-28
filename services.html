@@ -10,6 +10,7 @@ hero_headline: "A full <em>family</em> practice under one roof."
       <h2>{{ service.title }}</h2>
       <p>{{ service.description }}</p>
       {% if service.features.size > 0 %}
+      {% if service.features_label %}<p>{{ service.features_label }}</p>{% endif %}
       <ul>
         {% for feature in service.features %}
         <li>{{ feature }}</li>
