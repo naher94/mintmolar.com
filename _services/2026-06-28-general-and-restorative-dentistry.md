@@ -16,4 +16,5 @@ features:
   - Dental bridges
   - Implant-supported crowns, bridges, and dentures
   - Complete and Partial dentures
+order: 2
 ---

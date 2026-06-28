@@ -13,4 +13,5 @@ features:
   - CBCT (3D) imaging
   - iTero® digital wellness scans
   - Fluoride treatments
+order: 1
 ---

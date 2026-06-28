@@ -12,4 +12,5 @@ features:
   - Dental implant placement
   - Frenectomy
   - Gingivectomy
+order: 3
 ---
