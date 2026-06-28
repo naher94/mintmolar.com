@@ -9,6 +9,13 @@ hero_headline: "A full <em>family</em> practice under one roof."
     <div class="service-card scaffold-grid-span-full md:scaffold-grid-span-third">
       <h2>{{ service.title }}</h2>
       <p>{{ service.description }}</p>
+      {% if service.features.size > 0 %}
+      <ul>
+        {% for feature in service.features %}
+        <li>{{ feature }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
     </div>
   {% endfor %}
 </section>

@@ -131,6 +131,10 @@ content:
       - name: description
         label: Description
         type: text
+      - name: features
+        label: Features
+        type: string
+        list: true
       - name: order
         label: Order
         type: number
