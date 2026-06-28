@@ -19,7 +19,7 @@ hero_headline: "The people who will be <em>taking care</em> of you."
       <div class="content-container">
         <h2>{{ member.name }}</h2>
         <p class="title">{{ member.title }}</p>
-        <p class="bio">{{ member.bio }}</p>
+        <p class="bio">{{ member.bio | newline_to_br }}</p>
         <table class="member-meta">
           {% if member.education.size > 0 %}
             {% for edu in member.education %}
@@ -54,7 +54,7 @@ hero_headline: "The people who will be <em>taking care</em> of you."
       <div class="content-container">
         <h2>{{ member.name }}</h2>
         <p class="title">{{ member.title }}</p>
-        <p class="bio">{{ member.bio }}</p>
+        <p class="bio">{{ member.bio | newline_to_br }}</p>
         <table class="member-meta">
           {% if member.languages %}
           <tr>
