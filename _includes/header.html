@@ -13,8 +13,8 @@
 
     <div class="header__actions">
       <a class="header__phone" href="tel:{{ site.data.contact.phone_link }}">{{ site.data.contact.phone }}</a>
-      <!-- TODO update this link -->
-      <a class="header__cta" href="{{ site.baseurl }}/contact">Book a visit</a>
+      <!-- TODO: replace tel link with online booking URL when available -->
+      <a class="header__cta" href="tel:{{ site.data.contact.phone_link }}">Call to Book</a>
       <a class="header__phone-icon" href="tel:{{ site.data.contact.phone_link }}" aria-label="Call us">{% include phone.svg %}</a>
     </div>
 
