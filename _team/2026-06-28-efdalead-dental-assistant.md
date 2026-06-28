@@ -8,11 +8,13 @@ bio: >-
   College's Frederick campus in 2006 and have continued to expand my knowledge
   and skills throughout my career.
 
+
   I hold certificates in Expanded Functions Dental Assistant (E.F.D.A.), X-Ray
   Certified Dental Assistant, Certified Orthodontic Assistant, and am CPR
   certified. As Lead Dental Assistant, I am dedicated to providing exceptional
   patient care and helping create a positive dental experience for every
   patient.
+
 
   A Frederick, Maryland native, I was born and raised in the community that I
   now proudly serve. Outside of the office, I enjoy reading, making crafts, and
